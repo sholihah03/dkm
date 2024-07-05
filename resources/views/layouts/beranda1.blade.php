@@ -101,7 +101,7 @@
 <div class="dkm">DKM merupakan Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper pretium urna,
    a suscipit felis lobortis lacinia. Nulla facilisi. Suspendisse potenti. Duis id bibendum velit.
     Aenean nec aliquet justo. Etiam faucibus nisl quis imperdiet posuere. Nullam vel ultrices nibh. Nunc erat massa,
-     aliquet sed massa et, viverra eleifend est. Maecenas imperdiet eleifend quam, vel fringilla eros feugiat id. Maecenas 
+     aliquet sed massa et, viverra eleifend est. Maecenas imperdiet eleifend quam, vel fringilla eros feugiat id. Maecenas
      fringilla sagittis egestas. Maecenas fringilla, massa vel maximus ultricies, urna massa maximus diam, ac tincidunt nulla
       magna nec lectus. Fusce varius nibh est, </div>
 </div>

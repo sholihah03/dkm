@@ -80,3 +80,197 @@ section{
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.15);
 }
+/* style.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .centered-image {
+    text-align: center; /* Center image horizontally */
+  }
+  
+  .centered-image img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 100%; /* Ensure image does not exceed container height */
+    
+  }
+  .section {
+    background-color: #D6EFD8; /* Warna latar belakang bagian */
+    padding: 50px;
+    margin-bottom: 20px; /* Margin bawah untuk memberi jarak */
+    text-align: center; /* Teks di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 249px;
+    margin-left: 110px;
+    max-width: 1301px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /*margin-top: 20px; /* Menggunakan 100vh untuk membuat konten berada di tengah halaman */
+}
+.section h2 {
+    border-bottom: 2px solid #333; /* Garis bawah */
+    padding-bottom: 10px; /* Jarak bawah garis bawah */
+}
+.section p {
+    text-align: justify; /* Teks rata kiri kanan */
+    font-size: 18px;
+    line-height: 1.6; /* Ukuran teks */
+}
+.list h3{
+    margin-left: 120px;
+}
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.product {
+    background-color: #1A5319;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    width: 20%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+}
+
+.product img {
+    width: 300px; /* Contoh: Atur lebar gambar 300 piksel */
+    height: 200px; /* Atur tinggi gambar */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    border-radius: 8px; /* Contoh: jika diperlukan, atur border radius */
+}
+.product h3 {
+    margin: 16px 0 8px;
+}
+
+.product p {
+    padding: 0 16px;
+}
+
+.product button {
+    background-color: #D6EFD8;
+    color: #1A5319;
+    border: none;
+    padding: 10px 20px;
+    margin: 16px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #c0e0be;
+}
+.text-with-icon {
+    background-color: #1A5319;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Memposisikan horizontal di tengah */
+    align-items: center; /* Memposisikan vertikal di tengah */
+    border-radius: 5px;
+    width: 1301px;
+    margin-left: 120px;
+
+}
+.text-with-icon .icon {
+    margin-right: 8px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer {
+    background-color: #D6EFD8;
+    color: #1A5319;
+    padding: 40px 0;
+}
+
+.footer h3 {
+    color: #1A5319;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #1A5319;
+    margin-bottom: 10px;
+}
+
+.footer ul.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer ul.social-icons li a {
+    color: #1A5319;
+    font-size: 24px;
+}
+
+.footer ul.social-icons li a:hover {
+    color: #c0e0be;
+}
+
+.footer hr {
+    border-top: 1px solid #1A5319;
+    margin: 20px 0;
+}
+.left-content, .right-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-content .location {
+    margin-bottom: 10px;
+  }
+  
+  .location, .website, .email, .phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .text {
+    font-size: 14px;
+  }
+  
+  .right-content {
+    width: 50%;
+  }
+  
+  .right-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }

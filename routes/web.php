@@ -20,3 +20,4 @@ Route::get('/homepage',[beranda::class, 'index']);
 // Route::get('/settingAkun', [settingaccountController::class, 'index']);
 Route::get('/settingAkun', [settingaccountController::class, 'index2']);
 // Route::get('/settingAkun', [settingaccountController::class, 'index3']);
+// Route::view('/homepage','layouts.beranda1')->name('beranda1');
