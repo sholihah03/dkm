@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\beranda;
+
+use App\Http\Controllers\produkController;
+
 use App\Http\Controllers\settingaccountController;
 use App\Http\Controllers\ContactController;
 use
@@ -10,7 +13,6 @@ use
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::view('/login','login.index')->name('login');
 Route::view('/register','login.register')->name('register');
 Route::view('/inputtabungan','tabungan.inputtabungan')->name('inputtabungan');

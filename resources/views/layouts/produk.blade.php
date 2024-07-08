@@ -20,7 +20,7 @@
         <li><a href="{{route('beranda')}}">Beranda</a></li>
         <li><a href="{{route('produk')}}">Produk</a></li>
         <li><a href="#Category">Tentang Kami</a></li>
-        <li><a href="{{route('contact')}}">Kontak</a></li>
+        <li><a href="#Contact">Kontak</a></li>
         <li><a href="#Feedback"><i class="bi bi-person-fill"></i></a></li>
       </ul>
     </div>
@@ -30,48 +30,58 @@
   <br>
   <br>
 
-  <!-- Gambar -->
-  <div class="centered-image">
-    <img src="{{ asset('image/sahpiw.jpg') }}" alt="">
-  </div>
-  <br>
-  <div class="section">
-    <h2>Kurban</h2>
-    <p>Kurban yang berarti dekat atau mendekatkan atau disebut juga Udhhiyah atau Dhahiyyah secara harfiah berarti hewan sembelihan. Sementara itu, ibadah kurban adalah salah satu ibadah pemeluk agama Islam, dengan melakukan penyembelihan hewan ternak untuk dipersembahkan kepada Allah.</p>
-  </div>
-
-  <div class="list">
-    <h3>List Produk</h3>
-  </div>
 <div class="product-list">
         <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
+            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 1">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button>Rincian</button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
+            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 2">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button>Rincian</button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
+            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 3">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button>Rincian</button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
+            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 4">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button>Rincian</button>
         </div>
     </div>
-    <div class="text-with-icon">
-    <i class="bi bi-eye-fill icon"></i>
-        Selengkapnya
+    <br>
+    <div class="product-list">
+        <div class="product">
+            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 1">
+            <h3>Kambing Barawa</h3>
+            <p>25.000.000/Ekor</p>
+            <button>Rincian</button>
+        </div>
+        <div class="product">
+            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 2">
+            <h3>Kambing Barawa</h3>
+            <p>25.000.000/Ekor</p>
+            <button>Rincian</button>
+        </div>
+        <div class="product">
+            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 3">
+            <h3>Sapi Madura</h3>
+            <p>34.000.000/Ekor</p>
+            <button>Rincian</button>
+        </div>
+        <div class="product">
+            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 4">
+            <h3>Sapi Madura</h3>
+            <p>34.000.000/Ekor</p>
+            <button>Rincian</button>
+        </div>
     </div>
 <br>
 <div class="footer">

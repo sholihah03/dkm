@@ -100,56 +100,60 @@ section{
     
   }
   .section {
-    background-color: #D6EFD8; /* Warna latar belakang bagian */
+    background-color: #D6EFD8;
     padding: 50px;
-    margin-bottom: 20px; /* Margin bawah untuk memberi jarak */
-    text-align: center; /* Teks di tengah */
+    margin-bottom: 20px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 249px;
-    margin-left: 110px;
+    margin-left: 135px;
     max-width: 1301px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     /*margin-top: 20px; /* Menggunakan 100vh untuk membuat konten berada di tengah halaman */
 }
 .section h2 {
-    border-bottom: 2px solid #333; /* Garis bawah */
-    padding-bottom: 10px; /* Jarak bawah garis bawah */
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;/* Jarak bawah garis bawah */
 }
 .section p {
-    text-align: justify; /* Teks rata kiri kanan */
-    font-size: 18px;
-    line-height: 1.6; /* Ukuran teks */
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.6; /* Ukuran teks */
 }
 .list h3{
-    margin-left: 120px;
+    margin-left: 135px;
 }
 .product-list {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    padding: 20px;
+  width: 100%; /* Adjust to full width */
+  display: flex;
+  justify-content: space-between; /* Distribute products evenly */
+  align-items: stretch;
+  padding: 20px;
 }
 
 .product {
-    background-color: #1A5319;
-    color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    width: 20%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 5px;
+  background-color: #1A5319;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  width: 280px; /* Fixed width */
+  height: 312px; /* Fixed height */
+  display: flex;
+  flex-direction: column; /* Ensure contents are stacked vertically */
+  justify-content: space-between; /* Space out contents evenly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
-    width: 300px; /* Contoh: Atur lebar gambar 300 piksel */
-    height: 200px; /* Atur tinggi gambar */
-    object-fit: cover; /* Memastikan gambar tetap proporsional */
-    border-radius: 8px; /* Contoh: jika diperlukan, atur border radius */
+  width: 100%; /* Full width of the product */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensure the image covers the product area */
+  border-radius: 8px 8px 0 0;/* Contoh: jika diperlukan, atur border radius */
 }
 .product h3 {
     margin: 16px 0 8px;
@@ -160,18 +164,19 @@ section{
 }
 
 .product button {
-    background-color: #D6EFD8;
-    color: #1A5319;
-    border: none;
-    padding: 10px 20px;
-    margin: 16px 0;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #D6EFD8;
+  color: #1A5319;
+  border: none;
+  padding: 10px 20px;
+  margin: 16px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
 }
 
 .product button:hover {
-    background-color: #c0e0be;
+  background-color: #c0e0be;
 }
 .text-with-icon {
     background-color: #1A5319;
