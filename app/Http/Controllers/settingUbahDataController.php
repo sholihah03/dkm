@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class settingaccountController extends Controller
+class settingUbahDataController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('settingaccount.index');
+        return view('settingaccount.edit_ubah_data');
     }
 
     /**
