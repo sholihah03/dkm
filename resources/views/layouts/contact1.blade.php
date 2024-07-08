@@ -12,25 +12,17 @@
 </head>
 <body>
 
-<nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">DKM</a></div>
-      <ul class="menu">
-        <li><a href="#Home">Beranda</a></li>
-        <li><a href="#About">Produk</a></li>
-        <li><a href="#Category">Tentang Kami</a></li>
-        <li><a href="#Contact">Kontak</a></li>
-        <li><a href="#Feedback"><i class="bi bi-person-fill"></i></a></li>
-      </ul>
-    </div>
-  </nav>
-<div class="container">
-    <div class="contact-info">
-        <h1>Kontak Kami</h1>
-        <p>Anda dapat menghubungi kami melalui platform berikut:</p>
+@extends('layouts.master')
+@include('includes.nav')
+
+<div class="container d-flex flex-column align-items-center">
+    <h1>Kontak Kami</h1>
+    <p>Anda dapat menghubungi kami melalui platform berikut</p>
+    <ul class="list-unstyled">
+    <li class="contact-item mb-3">
         <ul>
-            <li><a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i>Chat dengan kami di WhatsApp</a></li>
-            <li><a href="mailto:info@yourdomain.com"><i class="bi bi-envelope-at-fill"></i> info@yourdomain.com</a></li>
+            <li><a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a></li>
+            <li><a href="mailto:info@yourdomain.com"><i class="bi bi-envelope-at-fill"></i> email@gmail.com</a></li>
             <li><i class="bi bi-geo-alt-fill"></i> Jalan Contoh No. 123, Kota, Negara</li>
         </ul>
     </div>

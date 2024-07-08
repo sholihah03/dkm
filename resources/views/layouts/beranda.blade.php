@@ -19,8 +19,8 @@
       <ul class="menu">
         <li><a href="{{route('beranda')}}">Beranda</a></li>
         <li><a href="{{route('produk')}}">Produk</a></li>
-        <li><a href="#Category">Tentang Kami</a></li>
-        <li><a href="{{route('contact')}}">Kontak</a></li>
+        <li><a href="{{route('tentang')}}">Tentang Kami</a></li>
+        <li><a href="{{route('contact1')}}">Kontak</a></li>
         <li><a href="#Feedback"><i class="bi bi-person-fill"></i></a></li>
       </ul>
     </div>
