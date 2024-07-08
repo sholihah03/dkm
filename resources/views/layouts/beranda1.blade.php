@@ -17,8 +17,8 @@
     <div class="navbar">
       <div class="logo"><a href="#">DKM</a></div>
       <ul class="menu">
-        <li><a href="{{route('beranda')}}">Beranda</a></li>
-        <li><a href="{{route('produk')}}">Produk</a></li>
+        <li><a href="#Home">Beranda</a></li>
+        <li><a href="#About">Produk</a></li>
         <li><a href="#Category">Tentang Kami</a></li>
         <li><a href="#Contact">Kontak</a></li>
         <li><a href="#Feedback"><i class="bi bi-person-fill"></i></a></li>
@@ -45,25 +45,25 @@
   </div>
 <div class="product-list">
         <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
+            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 1">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button>Rincian</button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
+            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 2">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button>Rincian</button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
+            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 3">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button>Rincian</button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
+            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 4">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button>Rincian</button>
@@ -101,7 +101,7 @@
 <div class="dkm">DKM merupakan Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper pretium urna,
    a suscipit felis lobortis lacinia. Nulla facilisi. Suspendisse potenti. Duis id bibendum velit.
     Aenean nec aliquet justo. Etiam faucibus nisl quis imperdiet posuere. Nullam vel ultrices nibh. Nunc erat massa,
-     aliquet sed massa et, viverra eleifend est. Maecenas imperdiet eleifend quam, vel fringilla eros feugiat id. Maecenas 
+     aliquet sed massa et, viverra eleifend est. Maecenas imperdiet eleifend quam, vel fringilla eros feugiat id. Maecenas
      fringilla sagittis egestas. Maecenas fringilla, massa vel maximus ultricies, urna massa maximus diam, ac tincidunt nulla
       magna nec lectus. Fusce varius nibh est, </div>
 </div>
