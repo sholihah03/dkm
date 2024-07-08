@@ -7,7 +7,7 @@
         <li><a href="{{route('produk')}}">Produk</a></li>
         <li><a href="{{route('tentang')}}">Tentang Kami</a></li>
         <li><a href="{{route('contact1')}}">Kontak</a></li>
-        <li><a href="#Feedback"><i class="bi bi-person-fill"></i></a></li>
+        <li><a href="{{route('settingAkun')}}"><i class="bi bi-person-fill"></i></a></li>
       </ul>
     </div>
   </nav>

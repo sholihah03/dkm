@@ -210,11 +210,11 @@ body {
 
 .topnav {
   overflow: hidden;
-  
 }
 
 .topnav .search-container {
   float: right;
+  display: flex; /* Menggunakan flexbox untuk menata input dan button secara horizontal */
 }
 
 .topnav input[type=text] {
@@ -228,10 +228,9 @@ body {
 }
 
 .topnav .search-container button {
-  float: right;
   padding: 6px 10px;
   margin-top: 8px;
-  margin-right: 16px;
+  margin-left: 6px; /* Menambahkan margin left agar terdapat ruang antara input dan button */
   background: #D6EFD8;
   font-size: 17px;
   border: none;
@@ -247,16 +246,12 @@ body {
 @media screen and (max-width: 600px) {
   .topnav .search-container {
     float: none;
+    display: block; /* Mengubah display menjadi block saat layar kecil */
   }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
+  .topnav input[type=text], .topnav .search-container button {
     width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
+    margin: 8px 0; /* Memberi margin atas dan bawah agar ada ruang antar elemen */
+    padding: 10px; /* Mengubah padding untuk ukuran yang lebih besar */
+    box-sizing: border-box; /* Memastikan padding tidak menambahkan lebar total */
   }
 }

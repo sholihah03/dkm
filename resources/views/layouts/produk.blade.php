@@ -12,29 +12,19 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">DKM</a></div>
-      <ul class="menu">
-        <li><a href="{{route('beranda')}}">Beranda</a></li>
-        <li><a href="{{route('produk')}}">Produk</a></li>
-        <li><a href="#Category">Tentang Kami</a></li>
-        <li><a href="#Contact">Kontak</a></li>
-        <li><a href="#Feedback"><i class="bi bi-person-fill"></i></a></li>
-      </ul>
-    </div>
-  </nav>
+@extends('layouts.master')
+@include('includes.nav')
+
   <br>
   <br>
   <br>
   <br>
   <br>
   <div class="topnav">
-  <div class="search-container">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-  </div>
+  <form class="search-container" action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
 </div>
 
   <div class="product-list">
