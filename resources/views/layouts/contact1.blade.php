@@ -21,9 +21,9 @@
     <ul class="list-unstyled">
     <li class="contact-item mb-3">
         <ul>
-            <li><a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a></li>
-            <li><a href="mailto:info@yourdomain.com"><i class="bi bi-envelope-at-fill"></i> email@gmail.com</a></li>
-            <li><i class="bi bi-geo-alt-fill"></i> Jalan Contoh No. 123, Kota, Negara</li>
+            <li><a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a></li><br>
+            <li><a href="mailto:info@yourdomain.com"><i class="bi bi-envelope-at-fill"></i> email@gmail.com</a></li><br>
+            <li><i class="bi bi-geo-alt-fill"></i> Jalan Contoh No. 123, Kota, Negara</li><br>
         </ul>
     </div>
 </div>
