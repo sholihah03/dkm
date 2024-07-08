@@ -39,7 +39,6 @@
             <div class="form-container">
                 <div class="form-header">
                     <h2>Ubah Data Peserta</h2>
-                    {{-- <a href="{{ route('ubahData') }}" class="edit-link">Ubah <img src="{{ asset('image/pencil.png') }}" alt="Edit" class="edit-icon"></a> --}}
                     <a href="#" id="edit-data-link" class="edit-link">Ubah <img src="{{ asset('image/pencil.png') }}" alt="Edit" class="edit-icon"></a>
                 </div>
                 <form>
@@ -84,7 +83,6 @@
                     <input type="text" id="kecamatan" placeholder="Tambahkan Nama Kecamatan">
                     <label for="provinsi">Provinsi</label>
                     <input type="text" id="provinsi" placeholder="Tambahkan Nama Provinsi">
-                    {{-- <button type="button">Ubah</button> --}}
                 </form>
             </div>
         </div>
@@ -95,7 +93,6 @@
             <div class="form-container">
                 <div class="form-header-ubahPW">
                     <h2>Ubah Password</h2>
-                    {{-- <a href="#" class="edit-link-ubahPW">Ubah <img src="{{ asset('image/pencil.png') }}" alt="Edit" class="edit-icon-ubahPW"></a> --}}
                 </div>
                 <form>
                     <label for="password-lama">Password Lama</label>
@@ -110,48 +107,22 @@
         </div>
     </div>
 
-    @include('settingaccount.edit_ubah_data')
+    <div id="edit-popup" class="popup">
+        <div class="popup-content">
+            @include('settingaccount.edit_ubah_data')
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
 
     <script src="{{ asset('js/popup_ubah_data.js') }}"></script>
 
-    {{-- <script>
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('.form-section, .profile');
-        const dataPesertaSection = document.getElementById('data-peserta'); // Mendapatkan elemen data-peserta
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-
-                if (link.dataset.target === 'data-peserta') {
-                    dataPesertaSection.style.display = 'block'; // Menampilkan data-peserta
-                } else {
-                    dataPesertaSection.style.display = 'none'; // Menyembunyikan data-peserta jika bukan data-peserta yang di klik
-                }
-
-                sections.forEach(section => {
-                    if (section.id === link.dataset.target) {
-                        section.style.display = 'block';
-                    } else {
-                        section.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Set initial section display
-        sections.forEach(section => {
-            section.style.display = 'none';
-        });
-        dataPesertaSection.style.display = 'block'; // Menampilkan data-peserta pada awal
-    </script> --}}
     <script>
         const navLinks = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('.form-section, .profile');
-        const dataPesertaSection = document.getElementById('data-peserta'); // Mendapatkan elemen data-peserta
-        const editDataLink = document.getElementById('edit-data-link'); // Tombol "Ubah" pada form Data Peserta
-        const dataPesertaForm = document.getElementById('data-peserta-form'); // Form Data Peserta
+        const dataPesertaSection = document.getElementById('data-peserta');
+        const editDataLink = document.getElementById('edit-data-link');
+        const editPopup = document.getElementById('edit-popup');
+        const closeBtn = document.querySelector('.close-btn');
 
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -159,9 +130,9 @@
                 link.classList.add('active');
 
                 if (link.dataset.target === 'data-peserta') {
-                    dataPesertaSection.style.display = 'block'; // Menampilkan data-peserta
+                    dataPesertaSection.style.display = 'block';
                 } else {
-                    dataPesertaSection.style.display = 'none'; // Menyembunyikan data-peserta jika bukan data-peserta yang di klik
+                    dataPesertaSection.style.display = 'none';
                 }
 
                 sections.forEach(section => {
@@ -176,20 +147,20 @@
 
         // Tampilkan popup saat tombol "Ubah" di klik
         editDataLink.addEventListener('click', (e) => {
-            e.preventDefault(); // Menghentikan aksi default dari tombol "Ubah"
-            showPopup();
+            e.preventDefault();
+            editPopup.style.display = 'block';
         });
 
-        // Sembunyikan popup saat tombol "Batal" di klik
-        document.querySelector('.cancel-btn').addEventListener('click', () => {
-            hidePopup();
+        // Sembunyikan popup saat tombol "Tutup" di klik
+        closeBtn.addEventListener('click', () => {
+            editPopup.style.display = 'none';
         });
 
         // Set initial section display
         sections.forEach(section => {
             section.style.display = 'none';
         });
-        dataPesertaSection.style.display = 'block'; // Menampilkan data-peserta pada awal
+        dataPesertaSection.style.display = 'block';
     </script>
 </body>
 </html>
