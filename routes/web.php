@@ -24,8 +24,12 @@ Route::get('/homepage',[beranda::class, 'index']);
 
 
 
+
 // Route::get('/settingAkun', [settingaccountController::class, 'index']);
 Route::get('/settingAkun', [settingaccountController::class, 'index2']);
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 // Route::get('/settingAkun', [settingaccountController::class, 'index3']);
+Route::get('/settingAkun', [settingaccountController::class, 'index'])->name('settingAkun');
+Route::get('/ubahData', [settingUbahDataController::class, 'index'])->name('ubahData');
+
 // Route::view('/homepage','layouts.beranda1')->name('beranda1');
