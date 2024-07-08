@@ -7,7 +7,7 @@
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/beranda.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/produk.css') }}" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
@@ -29,61 +29,95 @@
   <br>
   <br>
   <br>
+  <br>
+  <div class="topnav">
+  <div class="search-container">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+  </div>
+</div>
 
-<div class="product-list">
+  <div class="product-list">
         <div class="product">
-            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 1">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
-            <button>Rincian</button>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 2">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
-            <button>Rincian</button>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 3">
+            <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
-            <button>Rincian</button>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 4">
+            <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
-            <button>Rincian</button>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
     </div>
-    <br>
-    <div class="product-list">
+        <br>
+        <div class="product-list">
         <div class="product">
-            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 1">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
-            <button>Rincian</button>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 2">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
-            <button>Rincian</button>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 3">
+            <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
-            <button>Rincian</button>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
         <div class="product">
-            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 4">
+            <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
-            <button>Rincian</button>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
     </div>
 <br>
+<div class="product-list">
+        <div class="product">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
+            <h3>Kambing Barawa</h3>
+            <p>25.000.000/Ekor</p>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
+        </div>
+        <div class="product">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
+            <h3>Kambing Barawa</h3>
+            <p>25.000.000/Ekor</p>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
+        </div>
+        <div class="product">
+            <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
+            <h3>Sapi Madura</h3>
+            <p>34.000.000/Ekor</p>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
+        </div>
+        <div class="product">
+            <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
+            <h3>Sapi Madura</h3>
+            <p>34.000.000/Ekor</p>
+            <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
+        </div>
+    </div>
+    <br>
 <div class="footer">
   <div class="left-content">
     <h2>DKM</h2>
