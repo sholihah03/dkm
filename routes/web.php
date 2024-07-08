@@ -15,6 +15,7 @@ Route::view('/login','login.index')->name('login');
 Route::view('/register','login.register')->name('register');
 Route::view('/inputtabungan','tabungan.inputtabungan')->name('inputtabungan');
 Route::view('/tabungan','tabungan.tabungan')->name('tabungan');
+Route::view('/contact', 'layouts.contact')->name('contact');
 
 Route::view('/homepage','layouts.beranda')->name('beranda');
 Route::get('/homepage',[beranda::class, 'index']);
