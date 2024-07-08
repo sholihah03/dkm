@@ -5,7 +5,7 @@ body {
     padding: 0;
     }
 
-    .container-data {
+    .container-alamat {
     width: 400px;
     margin: 50px auto;
     padding: 20px;
@@ -15,7 +15,7 @@ body {
     position: relative;
     }
 
-    .close-btn-data {
+    .close-btn-alamat {
         position: absolute;
         top: 10px;
         right: 10px;

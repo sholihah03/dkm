@@ -5,14 +5,14 @@ body {
     background-color: #f4f4f4;
 }
 
-.container {
+/* .container {
     width: 80%;
     margin: 50px auto;
     background-color: #fff;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .header {
     background-color: #4CAF50;
@@ -380,16 +380,16 @@ body {
 }
 
 /* Popup content */
-.popup-content {
+/* .popup-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-}
+} */
 
 /* Close button */
-.close-btn {
+/* .close-btn {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -401,6 +401,6 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
+} */
 
 
