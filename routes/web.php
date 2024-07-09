@@ -8,6 +8,8 @@ use App\Http\Controllers\settingaccountController;
 use App\Http\Controllers\settingUbahDataController;
 use App\Http\Controllers\LoginnController;
 use App\Http\Controllers\RegisterrController;
+use App\Http\Controllers\tentangController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,7 +32,8 @@ Route::view('/tentang', 'layouts.tentang')->name('tentang');
 
 // Route::view('/homepage', 'layouts.beranda')->name('beranda');
 Route::get('/homepage', [beranda::class, 'index'])->name('beranda')->middleware('auth');
-
+Route::get('/produk', [produkController::class, 'index'])->name('produk');
+Route::get('/tentang',[tentangController::class, 'index'])->name('tentang');
 
 
 
