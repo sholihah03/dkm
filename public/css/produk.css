@@ -213,6 +213,7 @@ body {
 }
 
 .topnav .search-container {
+  margin-right: 29px;
   float: right;
   display: flex; /* Menggunakan flexbox untuk menata input dan button secara horizontal */
 }
