@@ -30,6 +30,8 @@ Route::view('/tabungan','tabungan.tabungan')->name('tabungan');
 Route::view('/contact1', 'layouts.contact1')->name('contact1');
 Route::view('/tentang', 'layouts.tentang')->name('tentang');
 Route::view('/home', 'admin.home')->name('home');
+Route::view('/produkhewan', 'admin.produkhewan')->name('produkhewan');
+Route::view('/tabungankurban', 'admin.tabungankurban')->name('tabungankurban');
 
 
 // Route::view('/homepage', 'layouts.beranda')->name('beranda');

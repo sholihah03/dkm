@@ -37,8 +37,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data Toko:</h6>
-                        <a class="collapse-item" href="buttons.html">Pemasukan</a>
-                        <a class="collapse-item" href="cards.html">Pengeluaran</a>
+                        <a class="collapse-item" href="{{route('produkhewan')}}">Produk</a>
+                        <a class="collapse-item" href="{{route('tabungankurban')}}">Tabungan</a>
                     </div>
                 </div>
             </li>
