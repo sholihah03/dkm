@@ -10,10 +10,13 @@ use App\Http\Controllers\settingUbahDataController;
 use App\Http\Controllers\SettingUbahAlamatController;
 use App\Http\Controllers\tentangController;
 use App\Http\Controllers\admin\homeController;
+
+
 use App\Http\Controllers\AuthController;
 
 use App\Http\Controllers\admin\produkhewanController;
 use App\Http\Controllers\admin\tabunganController;
+use App\Http\Controllers\admin\tabungankurbanController;
 
 
 Route::get('/', function () {
@@ -45,6 +48,7 @@ Route::view('/contact1', 'layouts.contact1')->name('contact1');
 Route::view('/tentang', 'layouts.tentang')->name('tentang');
 Route::view('/home', 'admin.home')->name('home');
 Route::view('/produkhewan', 'admin.produkhewan')->name('produkhewan');
+Route::view('/tabungan', 'admin.tabungan')->name('tabungan');
 Route::view('/tabungankurban', 'admin.tabungankurban')->name('tabungankurban');
 
 

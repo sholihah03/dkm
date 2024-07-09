@@ -206,8 +206,4 @@
         </ul>
 
     </nav>
-<<<<<<< HEAD
     <!-- End of Topbar -->
-=======
-    <!-- End of Topbar -->
->>>>>>> fc09d65dc0565e54e93c6b5ef7b6fc0db4d8f51f
