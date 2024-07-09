@@ -10,7 +10,7 @@ class Authenticate extends Middleware
     {
         if (! $request->expectsJson()) {
             Log::info('User not authenticated, redirecting to login');
-            return route('loginIndex');
+            return route('beranda');
         }
     }
 

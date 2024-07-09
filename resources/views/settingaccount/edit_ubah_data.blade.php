@@ -7,21 +7,22 @@
 
 <div class="container-data">
     <span class="close-btn-data">&times;</span>
-    <form>
+    {{-- <form action="{{ route('ubahData', $user->id) }}"> --}}
+    <form action="{{ route('ubahData') }}" method="POST">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" value="">
+        <input type="text" id="username" name="username" placeholder="Tambahkan Username" value="{{ $user->username ?? '' }}">
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="">
+        <input type="email" id="email" name="email" placeholder="Tambahkan Email" value="{{ $user->email ?? '' }}">
 
         <label for="nama">Nama Lengkap:</label>
-        <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" value="">
+        <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" value="{{ $user->nama_lengkap ?? '' }}">
 
         <label for="telepon">No Telepon:</label>
-        <input type="text" id="no_telepon" name="no_telepon" placeholder="No Telepon" value="">
+        <input type="text" id="no_telepon" name="no_telepon" placeholder="No Telepon" value="{{ $user->no_telepon ?? '' }}">
 
         <label for="tanggal">Tanggal Lahir:</label>
-        <input type="date" id="tgl_lahir" name="tgl_lahir" value="">
+        <input type="date" id="tgl_lahir" name="tgl_lahir" value="{{ $user->tgl_lahir ?? '' }}">
 
         <button type="submit">Simpan</button>
         {{-- <button type="button" class="cancel">Batal</button> --}}
