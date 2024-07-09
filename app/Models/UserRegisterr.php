@@ -1,5 +1,7 @@
 <?php
 
+// app/Models/UserRegisterr.php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,19 +13,18 @@ class UserRegisterr extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    protected $table = 'newusers';
+    protected $table = 'newusers'; // Nama tabel sesuai dengan kebutuhan
+    protected $primaryKey ='idUser'; // Primary key yang digunakan
 
     protected $fillable = [
         'username',
-        'nama_lengkap',
         'email',
-        'no_telepon',
         'password',
-        'tgl_lahir',
     ];
 
     protected $hidden = [
         'password',
+        'remember_token',
     ];
 
     public function setPasswordAttribute($value)
@@ -33,27 +34,10 @@ class UserRegisterr extends Authenticatable
 
     public function getAuthIdentifierName()
     {
-        return 'username';
+        return 'username'; // Kolom yang digunakan untuk autentikasi
     }
 
-
-    /**
-     * Change user password.
-     *
-     * @param  string  $oldPassword
-     * @param  string  $newPassword
-     * @return bool
-     */
-
-    public function changePassword($oldPassword, $newPassword)
-    {
-        // Pastikan password lama sesuai
-        if (!Hash::check($oldPassword, $this->password)) {
-            return false;
-        }
-        // Update password baru
-        $this->password = Hash::make($newPassword);
-        $this->save();
-        return true;
-    }
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }

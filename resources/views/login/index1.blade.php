@@ -13,7 +13,7 @@
     </div>
     <div class="batas"></div>
     <div class="login">
-        <form action="{{ route('loginPost') }}" method="POST">
+        <form action="{{ route("login") }}" method="POST">
             @csrf
             <h3>Login</h3>
             <h2>Selamat Datang di DKM Nurul Hidayah Silahkan Masuk Ke Akun Anda</h2>
@@ -31,7 +31,7 @@
             <button type="submit" class="btn btn-success">Login</button>
 
             <div class="form-group daftar">
-                <p>Belum memiliki akun? <a href="{{ route('registerIndex') }}" class="text-primary">Daftar Sekarang</a></p>
+                <p>Belum memiliki akun? <a href="" class="text-primary">Daftar Sekarang</a></p>
             </div>
         </form>
     </div>

@@ -2,32 +2,13 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
-use Illuminate\Support\Facades\Log;
 
 class Authenticate extends Middleware
 {
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            Log::info('User not authenticated, redirecting to login');
-            return route('beranda');
+            return route('loginIndex'); // Pastikan ini mengarah ke rute login
         }
-    }
-
-    protected function authenticate($request, array $guards)
-    {
-        if (empty($guards)) {
-            $guards = [null];
-        }
-
-        foreach ($guards as $guard) {
-            if ($this->auth->guard($guard)->check()) {
-                $this->auth->shouldUse($guard);
-                Log::info('User authenticated successfully');
-                return $this->auth->shouldUse($guard);
-            }
-        }
-
-        $this->unauthenticated($request, $guards);
     }
 }
