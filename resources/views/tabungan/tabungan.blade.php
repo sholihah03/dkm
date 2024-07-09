@@ -8,45 +8,52 @@
     <link rel="stylesheet" href="{{ asset('assets/css/input.css') }}">
 </head>
 <body>
-<div class="container mt-4">
-    <div class="row mb-3">
-        <div class="col-12">
-            <h4 class="text-left bg-light-green p-2">Input Data Tabungan</h4>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6 text-center">
-            <img src="{{ asset('assets/images/sapi limosin..jpg')}}" alt="Sapi Limosin">
-            <p><b>Sapi Limosin</b></p>
-            <p>34.000.000/Ekor</p>
-            <p>Berat: 1 Ton</p>
-        </div>
-        <div class="col-md-6">
-            <div class="bg-light-green p-4 rounded">
-                <form>
-                    <div class="form-group">
-                        <label for="awalWaktuTabungan">Awal Waktu Tabungan</label>
-                        <input type="date" id="awal_waktu_tabungan" name="awal_waktu_tabungan" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="targetWaktuTabungan">Target Waktu Tabungan</label>
-                        <input type="date" id="target_waktu_tabungan" name="target_waktu_tabungan" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="jumlahCicilan">Jumlah Cicilan/Bulan</label>
-                        <input type="text" id="junlah_cicilan/bulan" name="junlah_cicilan/bulan" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="noRekening">No. Rekening</label>
-                        <input type="text" id="no_rekening" name="no_rekening" class="form-control" required>
-                    </div>
-                    <button type="submit" class="btn btn-success btn-block">Submit</button>
-                </form>
+    @extends('layouts.master')
+    @include('includes.nav')
+
+    <div class="container mt-4">
+        <div class="row mb-3">
+            <div class="col-12">
+                <h4 class="text-left custom-background p-2">Input Data Tabungan</h4>
             </div>
         </div>
     </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img src="{{ asset('assets/images/sapi limosin..jpg')}}" alt="Sapi Limosin" class="img-fluid">
+                <p><b>Sapi Limosin</b></p>
+                <p>34.000.000/Ekor</p>
+                <p>Berat: 1 Ton</p>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light-green p-4 rounded">
+                    <form>
+                        <div class="form-group">
+                            <label for="awalWaktuTabungan">Awal Waktu Tabungan</label>
+                            <input type="date" id="awal_waktu_tabungan" name="awal_waktu_tabungan" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="targetWaktuTabungan">Target Waktu Tabungan</label>
+                            <input type="date" id="target_waktu_tabungan" name="target_waktu_tabungan" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jumlahCicilan">Jumlah Cicilan/Bulan</label>
+                            <input type="text" id="jumlah_cicilan_bulan" name="jumlah_cicilan_bulan" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="noRekening">No. Rekening</label>
+                            <input type="text" id="no_rekening" name="no_rekening" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

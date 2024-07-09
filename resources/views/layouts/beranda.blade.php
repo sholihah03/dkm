@@ -12,19 +12,8 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">DKM</a></div>
-      <ul class="menu">
-        <li><a href="#Home">Beranda</a></li>
-        <li><a href="#About">Produk</a></li>
-        <li><a href="#Category">Tentang Kami</a></li>
-        <li><a href="#Contact">Kontak</a></li>
-        <li><a href="#Feedback"><i class="bi bi-person-fill"></i></a></li>
-      </ul>
-    </div>
-  </nav>
+@extends('layouts.master')
+@include('includes.nav')
   <br>
   <br>
   <br>
@@ -40,39 +29,39 @@
     <p>Kurban yang berarti dekat atau mendekatkan atau disebut juga Udhhiyah atau Dhahiyyah secara harfiah berarti hewan sembelihan. Sementara itu, ibadah kurban adalah salah satu ibadah pemeluk agama Islam, dengan melakukan penyembelihan hewan ternak untuk dipersembahkan kepada Allah.</p>
   </div>
 
-  <div class="list">
-    <h3>List Produk</h3>
-  </div>
-<div class="product-list">
-        <div class="product">
-            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 1">
-            <h3>Kambing Barawa</h3>
-            <p>25.000.000/Ekor</p>
-            <button>Rincian</button>
-        </div>
-        <div class="product">
-            <img src="{{ asset('image/kambing.jpg') }}" alt="Product 2">
-            <h3>Kambing Barawa</h3>
-            <p>25.000.000/Ekor</p>
-            <button>Rincian</button>
-        </div>
-        <div class="product">
-            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 3">
-            <h3>Sapi Madura</h3>
-            <p>34.000.000/Ekor</p>
-            <button>Rincian</button>
-        </div>
-        <div class="product">
-            <img src="{{ asset('image/sapir.jpg') }}" alt="Product 4">
-            <h3>Sapi Madura</h3>
-            <p>34.000.000/Ekor</p>
-            <button>Rincian</button>
-        </div>
+  <div class="product-list">
+    <div class="product">
+        <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
+        <h3>Kambing Barawa</h3>
+        <p>25.000.000/Ekor</p>
+        <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
     </div>
-    <div class="text-with-icon">
-    <i class="bi bi-eye-fill icon"></i>
-        Selengkapnya
+    <div class="product">
+        <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
+        <h3>Kambing Barawa</h3>
+        <p>25.000.000/Ekor</p>
+        <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
     </div>
+    <div class="product">
+        <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
+        <h3>Sapi Madura</h3>
+        <p>34.000.000/Ekor</p>
+        <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
+    </div>
+    <div class="product">
+        <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
+        <h3>Sapi Madura</h3>
+        <p>34.000.000/Ekor</p>
+        <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
+    </div>
+</div>
+
+<div class="text-with-icon">
+    <a href="{{route('produk')}}">
+        <i class="bi bi-eye-fill icon"></i>Selengkapnya
+    </a>
+</div>
+
 <br>
 <div class="footer">
   <div class="left-content">
@@ -96,15 +85,17 @@
       <span class="icon">&#9742;</span>
       <span class="text">+6233333</span>
     </div>
+  </div>
+  <div class="right-content">
+    <div class="dkm">DKM merupakan Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper pretium urna,
+       a suscipit felis lobortis lacinia. Nulla facilisi. Suspendisse potenti. Duis id bibendum velit.
+        Aenean nec aliquet justo. Etiam faucibus nisl quis imperdiet posuere. Nullam vel ultrices nibh. Nunc erat massa,
+         aliquet sed massa et, viverra eleifend est. Maecenas imperdiet eleifend quam, vel fringilla eros feugiat id. Maecenas 
+         fringilla sagittis egestas. Maecenas fringilla, massa vel maximus ultricies, urna massa maximus diam, ac tincidunt nulla
+          magna nec lectus. Fusce varius nibh est, </div>
+  </div>
 </div>
-<div class="right-content">
-<div class="dkm">DKM merupakan Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper pretium urna,
-   a suscipit felis lobortis lacinia. Nulla facilisi. Suspendisse potenti. Duis id bibendum velit.
-    Aenean nec aliquet justo. Etiam faucibus nisl quis imperdiet posuere. Nullam vel ultrices nibh. Nunc erat massa,
-     aliquet sed massa et, viverra eleifend est. Maecenas imperdiet eleifend quam, vel fringilla eros feugiat id. Maecenas 
-     fringilla sagittis egestas. Maecenas fringilla, massa vel maximus ultricies, urna massa maximus diam, ac tincidunt nulla
-      magna nec lectus. Fusce varius nibh est, </div>
-</div>
+
 
   <!-- jQuery, Popper.js, and Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
