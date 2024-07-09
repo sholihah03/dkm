@@ -8,8 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+<<<<<<< HEAD
+    <link href="{{ asset('sbadmin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('sbadmin/css/sb-admin-2.min.css') }}" rel="stylesheet">
+
+    <title>Input Data</title>
+=======
 
     <title>SB Admin 2 - Dashboard</title>
+>>>>>>> fc09d65dc0565e54e93c6b5ef7b6fc0db4d8f51f
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('sbadmin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -28,7 +35,41 @@
     @include('admin.sidebar')
     @include('admin.header')
                 <!-- Begin Page Content -->
+<<<<<<< HEAD
+                <div class="container-fluid">
+            <h1 class="h3 mb-4 text-gray-800">{{ isset($produk) ? 'Edit' : 'Input' }} Produk</h1>
+            <form action="{{ isset($produk) ? route('produkhewan.update', $produk->id) : route('produkhewan.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                @if(isset($produk))
+                    @method('PUT')
+                @endif
+                <div class="form-group">
+                    <label for="name">Nama Produk</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ isset($produk) ? $produk->name : '' }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Harga Produk</label>
+                    <input type="number" class="form-control" id="price" name="price" value="{{ isset($produk) ? $produk->price : '' }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Gambar Produk</label>
+                    <input type="file" class="form-control" id="image" name="image" {{ isset($produk) ? '' : 'required' }}>
+                    @if(isset($produk) && $produk->image)
+                        <img src="{{ asset('storage/' . $produk->image) }}" alt="Produk Image" width="100">
+                    @endif
+                </div>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+        </div>
+    </div>
 
+    <script src="{{ asset('sbadmin/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('sbadmin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('sbadmin/js/sb-admin-2.min.js') }}"></script>
+=======
+
+>>>>>>> fc09d65dc0565e54e93c6b5ef7b6fc0db4d8f51f
                    
                 <!-- /.container-fluid -->
 

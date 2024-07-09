@@ -13,6 +13,8 @@
 @extends('layouts.master')
 @include('includes.nav')
 
+<br>
+<br>
 <div class="container d-flex flex-column align-items-center">
     <h1 class="about-title">Tentang Kami</h1>
     <div class="about-info-box p-4">
