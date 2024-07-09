@@ -14,6 +14,8 @@
 
 @extends('layouts.master')
 @include('includes.nav')
+@section('content')
+
 
   <br>
   <br>
@@ -21,87 +23,96 @@
   <br>
   <br>
   <div class="topnav">
-  <form class="search-container" action="/action_page.php">
+  <form class="search-container" action="{{ route('produk.search') }}" method="GET">
     <input type="text" placeholder="Search.." name="search">
     <button type="submit"><i class="fa fa-search"></i></button>
   </form>
 </div>
 
-  <div class="product-list">
-        <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
+  <div class="produk-list">
+  @foreach($produk as $produk)
+        <div class="produk">
+            <img src="{{ asset('storage/' . $produk->image) }}" alt="Produk Image">
+            <h3>{{ $produk->name }}</h3>
+            <p>{{ number_format($produk->price, 2) }}/Ekor</p>
+            <button><a href="{{ route('inputtabungan') }}">Menabung</a></button>
+        </div>
+    @endforeach
+
+        <div class="produk">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Produk 1">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
+        <div class="produk">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Produk 2">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
+        <div class="produk">
+            <img src="{{ asset('image/sapid.png') }}" alt="Produk 3">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
+        <div class="produk">
+            <img src="{{ asset('image/sapid.png') }}" alt="Produk 4">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
     </div>
         <br>
-        <div class="product-list">
-        <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
+        <div class="produk-list">
+        <div class="produk">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Produk 1">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
+        <div class="produk">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Produk 2">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
+        <div class="produk">
+            <img src="{{ asset('image/sapid.png') }}" alt="Produk 3">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
+        <div class="produk">
+            <img src="{{ asset('image/sapid.png') }}" alt="Produk 4">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
     </div>
 <br>
-<div class="product-list">
-        <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 1">
+<div class="produk-list">
+        <div class="produk">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Produk 1">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/kambingd.png') }}" alt="Product 2">
+        <div class="produk">
+            <img src="{{ asset('image/kambingd.png') }}" alt="Produk 2">
             <h3>Kambing Barawa</h3>
             <p>25.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 3">
+        <div class="produk">
+            <img src="{{ asset('image/sapid.png') }}" alt="Produk 3">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
         </div>
-        <div class="product">
-            <img src="{{ asset('image/sapid.png') }}" alt="Product 4">
+        <div class="produk">
+            <img src="{{ asset('image/sapid.png') }}" alt="Produk 4">
             <h3>Sapi Madura</h3>
             <p>34.000.000/Ekor</p>
             <button><a href="{{route('inputtabungan')}}">Menabung</a></button>
@@ -139,6 +150,8 @@
      fringilla sagittis egestas. Maecenas fringilla, massa vel maximus ultricies, urna massa maximus diam, ac tincidunt nulla
       magna nec lectus. Fusce varius nibh est, </div>
 </div>
+
+@endsection
 
   <!-- jQuery, Popper.js, and Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

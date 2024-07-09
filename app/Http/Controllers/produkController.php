@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produk;
 
 class produkController extends Controller
 {
@@ -12,6 +13,15 @@ class produkController extends Controller
     public function index()
     {
         return view ('layouts.produk');
+        $produk = Produk::all();
+        return view('layouts.produk', compact('produk'));
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('search');
+        $produk = Produk::where('name', 'LIKE', "%{$query}%")->get();
+        return view('layouts.produk', compact('produk'));
     }
 
     /**
