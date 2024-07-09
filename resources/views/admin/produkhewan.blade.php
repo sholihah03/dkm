@@ -16,7 +16,7 @@
 =======
 
     <title>SB Admin 2 - Dashboard</title>
->>>>>>> fc09d65dc0565e54e93c6b5ef7b6fc0db4d8f51f
+>>>>>>> fc09d65dc0565e54e93c6b5ef7b6fc0db4d8f51fzzz
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('sbadmin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -70,7 +70,7 @@
 =======
 
 >>>>>>> fc09d65dc0565e54e93c6b5ef7b6fc0db4d8f51f
-                   
+
                 <!-- /.container-fluid -->
 
             </div>
