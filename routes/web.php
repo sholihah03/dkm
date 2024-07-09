@@ -22,8 +22,6 @@ Route::view('/tentang', 'layouts.tentang')->name('tentang');
 
 // Route::view('/homepage', 'layouts.beranda')->name('beranda');
 Route::get('/homepage', [beranda::class, 'index'])->name('beranda');
-Route::get('/produk', [produkController::class, 'index'])->name('produk');
-Route::get('/tentang',[tentangController::class, 'index'])->name('tentang');
 
 
 
