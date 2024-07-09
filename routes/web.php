@@ -14,12 +14,10 @@ use App\Http\Controllers\LoginnController;
 use App\Http\Controllers\RegisterrController;
 use App\Http\Controllers\tentangController;
 use App\Http\Controllers\admin\homeController;
-<<<<<<< HEAD
+
 use App\Http\Controllers\admin\produkhewanController;
 use App\Http\Controllers\admin\tabunganController;
 use App\Http\Controllers\admin\tabungankurbanController;
-=======
->>>>>>> fc09d65dc0565e54e93c6b5ef7b6fc0db4d8f51f
 
 
 Route::get('/', function () {
@@ -53,10 +51,7 @@ Route::view('/contact1', 'layouts.contact1')->name('contact1');
 Route::view('/tentang', 'layouts.tentang')->name('tentang');
 Route::view('/home', 'admin.home')->name('home');
 Route::view('/produkhewan', 'admin.produkhewan')->name('produkhewan');
-<<<<<<< HEAD
 Route::view('/tabungan', 'admin.tabungan')->name('tabungan');
-=======
->>>>>>> fc09d65dc0565e54e93c6b5ef7b6fc0db4d8f51f
 Route::view('/tabungankurban', 'admin.tabungankurban')->name('tabungankurban');
 
 
