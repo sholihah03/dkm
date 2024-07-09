@@ -2,19 +2,7 @@
     <div class="profile-and-form">
         <!-- Profile Info -->
         <div class="profile-info">
-            <div class="imgProfil">
-                <div class="imgUser">
-                    <div class="cImg">
-                        <img src="{{asset('image/layer.png')}}" style="width: 200px; height: 200px;" alt="" class="object-cover object-center">
-                    </div>
-                </div>
-                <div class="chooseImg">
-                    <button type="button">Pilih Profil</button>
-                </div>
-                <div class="warningChsImg">
-                    <p>Ekstensi file yang diperbolehkan : JPG, PNG, JPEG</p>
-                </div>
-            </div>
+            @include('settingaccount.ubah_profile')
         </div>
         <!-- Form Container -->
         <div class="form-container">
