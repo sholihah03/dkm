@@ -10,7 +10,7 @@ use App\Http\Controllers\settingaccountController;
 use App\Http\Controllers\settingaccountAlamatController;
 use App\Http\Controllers\settingUbahDataController;
 use App\Http\Controllers\SettingUbahAlamatController;
-use App\Http\Controllers\admin\ProdukhewanController;
+use App\Http\Controllers\LoginnController;
 use App\Http\Controllers\RegisterrController;
 use App\Http\Controllers\tentangController;
 use App\Http\Controllers\admin\homeController;
@@ -46,15 +46,6 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-
-
-Route::get('/produkhewan', [ProdukhewanController::class, 'index'])->name('produkhewan.index');
-Route::get('/produkhewan/create', [ProdukhewanController::class, 'create'])->name('produkhewan.create');
-Route::post('/produkhewan', [ProdukhewanController::class, 'store'])->name('produkhewan.store');
-Route::get('/produhewan/{id}/edit', [ProdukhewanController::class, 'edit'])->name('produkhewan.edit');
-Route::put('/produkhewan/{id}', [ProdukhewanController::class, 'update'])->name('produkhewan.update');
-Route::delete('/produkhewan/{id}', [ProdukhewanController::class, 'destroy'])->name('produkhewan.destroy');
-
 
 
 Route::view('/inputtabungan','tabungan.inputtabungan')->name('inputtabungan');
