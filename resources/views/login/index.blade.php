@@ -13,7 +13,7 @@
     </div>
     <div class="batas"></div>
     <div class="login">
-        <form action="login.php" method="POST">
+        <form action="{{route ('loginIndex')}}" method="POST">
             <h3>Login</h3>
             <h2>Selamat Datang di DKM Nurul Hidayah Silahkan Masuk Ke Akun Anda</h2>
             <div class="form-group">
@@ -30,7 +30,7 @@
             <button type="submit" class="btn btn-success">Login</button>
            
             <div class="form-group daftar">
-                <p>Belum memiliki akun? <a href="register.php" class="text-primary">Daftar Sekarang</a></p>
+                <p>Belum memiliki akun? <a href="register" class="text-primary">Daftar Sekarang</a></p>
             </div>
         </form>
     </div>

@@ -15,13 +15,13 @@ class LoginController extends Controller
 {
     public function loginIndex()
     {
-        return view('login.login');
+        return view('login.index');
     }
 
     public function loginPost(Request $request)
     {
         $credentials = [
-            'email' => $request->email,
+            'username' => $request->username,
             'password' => $request->password,
         ];
 

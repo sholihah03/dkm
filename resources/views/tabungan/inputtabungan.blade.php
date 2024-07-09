@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/input.css') }}">
 </head>
 <body>
+    @extends('layouts.master')
+    @include('includes.nav')
 <div class="container mt-4">
     <div class="row mb-3">
         <div class="col-12">
