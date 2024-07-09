@@ -23,22 +23,13 @@
   <br>
   <br>
   <div class="topnav">
-  <form class="search-container" action="{{ route('produk.search') }}" method="GET">
+  <form class="search-container" action="">
     <input type="text" placeholder="Search.." name="search">
     <button type="submit"><i class="fa fa-search"></i></button>
   </form>
 </div>
 
   <div class="produk-list">
-  @foreach($produk as $produk)
-        <div class="produk">
-            <img src="{{ asset('storage/' . $produk->image) }}" alt="Produk Image">
-            <h3>{{ $produk->name }}</h3>
-            <p>{{ number_format($produk->price, 2) }}/Ekor</p>
-            <button><a href="{{ route('inputtabungan') }}">Menabung</a></button>
-        </div>
-    @endforeach
-
         <div class="produk">
             <img src="{{ asset('image/kambingd.png') }}" alt="Produk 1">
             <h3>Kambing Barawa</h3>
