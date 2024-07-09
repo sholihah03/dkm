@@ -35,32 +35,6 @@ class settingUbahDataController extends Controller
         //
     }
 
-    public function saveData(Request $request)
-    {
-        // Validasi data jika diperlukan
-        $validatedData = $request->validate([
-            'username' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'nama_lengkap' => 'nullable|string|max:255',
-            'no_telepon' => 'nullable|string|max:20',
-            'tgl_lahir' => 'nullable|date',
-        ]);
-
-        // Mengambil user yang sedang login
-        $user = auth()->user();
-
-        // Simpan data yang dikirimkan dari form
-        $user->username = $request->input('username');
-        $user->email = $request->input('email');
-        $user->nama_lengkap = $request->input('nama_lengkap');
-        $user->no_telepon = $request->input('no_telepon');
-        $user->tgl_lahir = $request->input('tgl_lahir');
-        // $user->save();
-
-        // Redirect kembali ke halaman setting akun atau halaman lain sesuai kebutuhan
-        return redirect()->route('settingAkun')->with('success', 'Data berhasil disimpan.');
-    }
-
     /**
      * Display the specified resource.
      */
@@ -82,7 +56,17 @@ class settingUbahDataController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = UserRegisterr::find($id);
+
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->nama_lengkap = $request->nama_lengkap;
+        $user->no_telepon = $request->no_telepon;
+        $user->tgl_lahir = $request->tgl_lahir;
+
+        $user->save();
+
+        return redirect()->route('settingAkun')->with('success', 'Data berhasil diupdate');
     }
 
     /**

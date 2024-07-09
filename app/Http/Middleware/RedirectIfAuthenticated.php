@@ -10,7 +10,7 @@ class RedirectIfAuthenticated
     public function handle(Request $request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/homepage');
+            return redirect('beranda');
         }
 
         return $next($request);

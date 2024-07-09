@@ -31,6 +31,7 @@ Route::view('/tentang', 'layouts.tentang')->name('tentang');
 
 
 // Route::view('/homepage', 'layouts.beranda')->name('beranda');
+// Route::get('/homepage', [beranda::class, 'index'])->name('beranda');
 Route::get('/homepage', [beranda::class, 'index'])->name('beranda')->middleware('auth');
 Route::get('/produk', [produkController::class, 'index'])->name('produk');
 Route::get('/tentang',[tentangController::class, 'index'])->name('tentang');
@@ -42,7 +43,7 @@ Route::get('/settingAkun', [settingaccountController::class, 'index2']);
 Route::get('/contact1', [ContactController::class, 'index'])->name('contact1');
 // Route::get('/settingAkun', [settingaccountController::class, 'index3']);
 Route::get('/settingAkun', [settingaccountController::class, 'index'])->name('settingAkun');
-Route::get('/ubahData', [settingUbahDataController::class, 'index'])->name('ubahData');
+Route::get('/settingAkun/ubahData', [settingUbahDataController::class, 'index'])->name('ubahData');
 Route::get('/ubah-alamat', function () {
     return view('settingaccount.ubah_alamat');
 })->name('ubah.alamat');
