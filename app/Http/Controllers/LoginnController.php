@@ -29,7 +29,7 @@ class LoginnController extends Controller
 
             return redirect()->route('beranda')->with('success', 'Login berhasil');
         }
-
+       dd($request);
         Log::warning('Login gagal', ['credentials' => $credentials]);
 
         return back()->with('error', 'Username atau Password yang Anda masukkan salah. Silahkan ulangi!');

@@ -17,23 +17,23 @@ class RegisterController extends Controller
 
     public function registerPost(Request $request)
     {
-
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:newusers',
-            'telp' => 'required|string|max:15',
-            'password' => 'required|string|min:8',
+            'username' => 'required|string|max:255',
+            'password' => 'required|string|min:6',
+            // Opsional
+            'nama_lengkap' => 'nullable|string',
+            'email' => 'nullable|string|email|unique:newusers,email',
+            'tgl_lahir' => 'nullable|date',
         ]);
 
-        $user = UserRegister::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'telp' => $request->telp,
-            'password' => Hash::make($request->password),
-        ]);
-
-        Session::flash('success', 'Registrasi berhasil!');
-        return redirect()->route('loginIndex');
+        $user = new UserRegister();
+        $user->username = $request->username;
+        $user->nama_lengkap = $request->nama_lengkap; // null jika tidak diisi
+        $user->email = $request->email; // null jika tidak diisi
+        $user->password = Hash::make($request->password);
+        $user->tgl_lahir = $request->tgl_lahir; // null jika tidak diisi
+        $user->save();
+        
+        return redirect()->route('loginIndex')->with('success', 'Account created successfully.');
     }
-        // return back()->withErrors(['error' => 'Registrasi gagal. Silakan coba lagi.']);
 }
