@@ -9,6 +9,7 @@ use App\Http\Controllers\settingUbahDataController;
 use App\Http\Controllers\LoginnController;
 use App\Http\Controllers\RegisterrController;
 use App\Http\Controllers\tentangController;
+use App\Http\Controllers\homeController;
 
 
 Route::get('/', function () {
@@ -28,12 +29,14 @@ Route::view('/inputtabungan','tabungan.inputtabungan')->name('inputtabungan');
 Route::view('/tabungan','tabungan.tabungan')->name('tabungan');
 Route::view('/contact1', 'layouts.contact1')->name('contact1');
 Route::view('/tentang', 'layouts.tentang')->name('tentang');
+Route::view('/home', 'admin.home')->name('home');
 
 
 // Route::view('/homepage', 'layouts.beranda')->name('beranda');
 Route::get('/homepage', [beranda::class, 'index'])->name('beranda')->middleware('auth');
 Route::get('/produk', [produkController::class, 'index'])->name('produk');
 Route::get('/tentang',[tentangController::class, 'index'])->name('tentang');
+Route::get('/home',[homeController::class, 'index'])->name('home');
 
 
 
