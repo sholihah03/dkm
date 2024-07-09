@@ -35,4 +35,25 @@ class UserRegisterr extends Authenticatable
     {
         return 'username';
     }
+
+
+    /**
+     * Change user password.
+     *
+     * @param  string  $oldPassword
+     * @param  string  $newPassword
+     * @return bool
+     */
+
+    public function changePassword($oldPassword, $newPassword)
+    {
+        // Pastikan password lama sesuai
+        if (!Hash::check($oldPassword, $this->password)) {
+            return false;
+        }
+        // Update password baru
+        $this->password = Hash::make($newPassword);
+        $this->save();
+        return true;
+    }
 }

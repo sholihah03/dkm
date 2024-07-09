@@ -3,20 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\UserRegisterr;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Alamat;
 
-class settingUbahDataController extends Controller
+class settingaccountAlamatController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // return view('settingaccount.edit_ubah_data');
-
-        $user = Auth::user(); // Mengambil data pengguna yang sedang login
-        return view('settingaccount.edit_data_popup', compact('user'));
+        $alamat = Auth::alamat();
+        return view('settingaccount.index', compact('alamat'));
     }
 
     /**
@@ -56,17 +54,7 @@ class settingUbahDataController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $user = UserRegisterr::find($id);
-
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->nama_lengkap = $request->nama_lengkap;
-        $user->no_telepon = $request->no_telepon;
-        $user->tgl_lahir = $request->tgl_lahir;
-
-        $user->save();
-
-        return redirect()->route('settingAkun')->with('success', 'Data berhasil diupdate');
+        //
     }
 
     /**
