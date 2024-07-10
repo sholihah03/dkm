@@ -14,7 +14,7 @@
     </div>
     <div class="batas"></div>
     <div class="login">
-        <form action="{{ route('registerIndex') }}" method="POST">
+        <form action="{{ route("register") }}" method="POST">
             @csrf
             <h3>Register</h3>
             <div class="form-group">

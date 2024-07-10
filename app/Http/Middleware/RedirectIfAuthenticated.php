@@ -1,18 +1,34 @@
 <?php
 namespace App\Http\Middleware;
 
-use Closure;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Illuminate\Support\Facades\Log;
 
-class RedirectIfAuthenticated
+class Authenticate extends Middleware
 {
-    public function handle(Request $request, Closure $next, $guard = null)
+    protected function redirectTo($request)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('beranda');
+        if (!$request->expectsJson()) {
+            Log::info('User not authenticated, redirecting to login');
+            return route('loginIndex');
+        }
+    }
+
+    protected function authenticate($request, array $guards)
+    {
+        if (empty($guards)) {
+            $guards = [null];
         }
 
-        return $next($request);
+        foreach ($guards as $guard) {
+            if ($this->auth->guard($guard)->check()) {
+                $this->auth->shouldUse($guard);
+                Log::info('User authenticated successfully');
+                return;
+            }
+        }
+
+        $this->unauthenticated($request, $guards);
     }
 }
+
