@@ -72,7 +72,7 @@ Route::view('/tabungankurban', 'admin.tabungankurban')->name('tabungankurban');
 
 
 
-Route::get('/homepage', [beranda::class, 'index'])->name('beranda')->middleware('auth');
+Route::get('/beranda', [beranda::class, 'index'])->name('beranda');
 Route::get('/produk', [produkController::class, 'index'])->name('produk');
 Route::get('/tentang',[tentangController::class, 'index'])->name('tentang');
 Route::get('/home',[homeController::class, 'index'])->name('home');
