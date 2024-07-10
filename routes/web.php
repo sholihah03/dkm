@@ -73,7 +73,7 @@ Route::get('/produkhewan',[produkhewanController::class, 'index'])->name('produk
 Route::get('/tabungan',[tabunganController::class, 'index'])->name('tabungan');
 
 
-Route::get('/settingAkun', [settingaccountController::class, 'index2']);
+Route::get('/settingAkun', [settingaccountController::class, 'index']);
 Route::get('/contact1', [ContactController::class, 'index'])->name('contact1');
 Route::get('/settingAkun', [settingaccountController::class, 'index'])->name('settingAkun');
 // Route::get('/settingAkun/ubahData', [settingUbahDataController::class, 'index'])->name('ubahData');

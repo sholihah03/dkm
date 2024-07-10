@@ -31,7 +31,7 @@
             <button type="submit" class="btn btn-success">Login</button>
 
             <div class="form-group daftar">
-                <p>Belum memiliki akun? <a href="" class="text-primary">Daftar Sekarang</a></p>
+                <p>Belum memiliki akun? <a href="{{ route('register') }}" class="text-primary">Daftar Sekarang</a></p>
             </div>
         </form>
     </div>
