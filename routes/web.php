@@ -26,7 +26,6 @@ Route::get('/', function () {
 
 Route::view('/homepage','layouts.beranda')->name('beranda');
 
-
 // Route::view('/login','login.index')->name('login');
 
 
