@@ -25,8 +25,19 @@ Route::get('/', function () {
 
 
 Route::view('/homepage','layouts.beranda')->name('beranda');
+<<<<<<< HEAD
+
+// Route::view('/login','login.index')->name('login');
+=======
+>>>>>>> 771b1551eb101eaed356e20d06c52f6540c00bf0
 
 
+<<<<<<< HEAD
+Route::get('/login',[LoginnController::class, 'loginIndex'])->name('login');
+Route::post('/login',[LoginnController::class, 'loginPost'])->name('loginPost');
+Route::get('/register',[RegisterrController::class, 'registerIndex'])->name('registerIndex');
+Route::post('/register',[RegisterrController::class, 'registerPost'])->name('registerPost');
+=======
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
 
@@ -40,6 +51,7 @@ Route::post('/produkhewan', [ProdukhewanController::class, 'store'])->name('prod
 Route::get('/produhewan/{id}/edit', [ProdukhewanController::class, 'edit'])->name('produkhewan.edit');
 Route::put('/produkhewan/{id}', [ProdukhewanController::class, 'update'])->name('produkhewan.update');
 Route::delete('/produkhewan/{id}', [ProdukhewanController::class, 'destroy'])->name('produkhewan.destroy');
+>>>>>>> 771b1551eb101eaed356e20d06c52f6540c00bf0
 
 
 Route::view('/inputtabungan','tabungan.inputtabungan')->name('inputtabungan');
@@ -52,14 +64,25 @@ Route::view('/tabungan', 'admin.tabungan')->name('tabungan');
 Route::view('/tabungankurban', 'admin.tabungankurban')->name('tabungankurban');
 
 
+<<<<<<< HEAD
+// Route::view('/homepage', 'layouts.beranda')->name('beranda');
+// Route::get('/homepage', [beranda::class, 'index'])->name('beranda');
+Route::middleware(['auth:userregisterrs'])->group(function () {
+=======
 
+>>>>>>> 771b1551eb101eaed356e20d06c52f6540c00bf0
 Route::get('/homepage', [beranda::class, 'index'])->name('beranda')->middleware('auth');
 Route::get('/produk', [produkController::class, 'index'])->name('produk');
 Route::get('/tentang',[tentangController::class, 'index'])->name('tentang');
 Route::get('/home',[homeController::class, 'index'])->name('home');
+<<<<<<< HEAD
+});
+
+=======
 
 Route::get('/produkhewan',[produkhewanController::class, 'index'])->name('produkhewan');
 Route::get('/tabungan',[tabunganController::class, 'index'])->name('tabungan');
+>>>>>>> 771b1551eb101eaed356e20d06c52f6540c00bf0
 
 
 Route::get('/settingAkun', [settingaccountController::class, 'index']);
@@ -85,3 +108,17 @@ Route::post('/tambahAlamat', [SettingUbahAlamatController::class, 'tambahAlamat'
 Route::put('/updateAlamat/{id}', [SettingUbahAlamatController::class, 'updateAlamat'])->name('updateAlamat');
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+Route::view('/reset','forgout.reset')->name('reset');
+Route::view('/passbaru','forgout.passbaru')->name('passbaru');
