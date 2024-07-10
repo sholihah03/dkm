@@ -22,13 +22,14 @@ Route::get('/', function () {
 
 
 Route::view('/homepage','layouts.beranda')->name('beranda');
+
 // Route::view('/login','login.index')->name('login');
 
 // Route::get('/login','register.index')->name('register');
 // Route::view('/login','login.index')->name('login');
 // Route::view('/register','login.register')->name('register');
 
-Route::get('/login',[LoginnController::class, 'loginIndex'])->name('loginIndex');
+Route::get('/login',[LoginnController::class, 'loginIndex'])->name('login');
 Route::post('/login',[LoginnController::class, 'loginPost'])->name('loginPost');
 Route::get('/register',[RegisterrController::class, 'registerIndex'])->name('registerIndex');
 Route::post('/register',[RegisterrController::class, 'registerPost'])->name('registerPost');
@@ -45,11 +46,12 @@ Route::view('/tabungankurban', 'admin.tabungankurban')->name('tabungankurban');
 
 // Route::view('/homepage', 'layouts.beranda')->name('beranda');
 // Route::get('/homepage', [beranda::class, 'index'])->name('beranda');
+Route::middleware(['auth:userregisterrs'])->group(function () {
 Route::get('/homepage', [beranda::class, 'index'])->name('beranda')->middleware('auth');
 Route::get('/produk', [produkController::class, 'index'])->name('produk');
 Route::get('/tentang',[tentangController::class, 'index'])->name('tentang');
 Route::get('/home',[homeController::class, 'index'])->name('home');
-
+});
 
 
 
@@ -69,3 +71,17 @@ Route::get('/ubah-alamat', function () {
 })->name('ubah.alamat');
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+Route::view('/reset','forgout.reset')->name('reset');
+Route::view('/passbaru','forgout.passbaru')->name('passbaru');
