@@ -25,19 +25,11 @@ Route::get('/', function () {
 
 
 Route::view('/homepage','layouts.beranda')->name('beranda');
-<<<<<<< HEAD
+
 
 // Route::view('/login','login.index')->name('login');
-=======
->>>>>>> 771b1551eb101eaed356e20d06c52f6540c00bf0
 
 
-<<<<<<< HEAD
-Route::get('/login',[LoginnController::class, 'loginIndex'])->name('login');
-Route::post('/login',[LoginnController::class, 'loginPost'])->name('loginPost');
-Route::get('/register',[RegisterrController::class, 'registerIndex'])->name('registerIndex');
-Route::post('/register',[RegisterrController::class, 'registerPost'])->name('registerPost');
-=======
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
 
@@ -51,7 +43,7 @@ Route::post('/produkhewan', [ProdukhewanController::class, 'store'])->name('prod
 Route::get('/produhewan/{id}/edit', [ProdukhewanController::class, 'edit'])->name('produkhewan.edit');
 Route::put('/produkhewan/{id}', [ProdukhewanController::class, 'update'])->name('produkhewan.update');
 Route::delete('/produkhewan/{id}', [ProdukhewanController::class, 'destroy'])->name('produkhewan.destroy');
->>>>>>> 771b1551eb101eaed356e20d06c52f6540c00bf0
+
 
 
 Route::view('/inputtabungan','tabungan.inputtabungan')->name('inputtabungan');
@@ -64,41 +56,37 @@ Route::view('/tabungan', 'admin.tabungan')->name('tabungan');
 Route::view('/tabungankurban', 'admin.tabungankurban')->name('tabungankurban');
 
 
-<<<<<<< HEAD
-// Route::view('/homepage', 'layouts.beranda')->name('beranda');
-// Route::get('/homepage', [beranda::class, 'index'])->name('beranda');
-Route::middleware(['auth:userregisterrs'])->group(function () {
-=======
 
->>>>>>> 771b1551eb101eaed356e20d06c52f6540c00bf0
+// Route::middleware(['auth:userregisterrs'])->group(function () {
+
+
+
 Route::get('/homepage', [beranda::class, 'index'])->name('beranda')->middleware('auth');
 Route::get('/produk', [produkController::class, 'index'])->name('produk');
 Route::get('/tentang',[tentangController::class, 'index'])->name('tentang');
 Route::get('/home',[homeController::class, 'index'])->name('home');
-<<<<<<< HEAD
-});
+// });
 
-=======
+
 
 Route::get('/produkhewan',[produkhewanController::class, 'index'])->name('produkhewan');
 Route::get('/tabungan',[tabunganController::class, 'index'])->name('tabungan');
->>>>>>> 771b1551eb101eaed356e20d06c52f6540c00bf0
 
 
 Route::get('/settingAkun', [settingaccountController::class, 'index2']);
 Route::get('/contact1', [ContactController::class, 'index'])->name('contact1');
 Route::get('/settingAkun', [settingaccountController::class, 'index'])->name('settingAkun');
-Route::get('/settingAkun/ubahData', [settingUbahDataController::class, 'index'])->name('ubahData');
+// Route::get('/settingAkun/ubahData', [settingUbahDataController::class, 'index'])->name('ubahData');
 
 
 Route::get('/settingAlamat', [settingaccountAlamatController::class, 'index'])->name('settingAlamat');
 Route::get('/settingAkun/ubahAlamat', [SettingUbahAlamatController::class, 'index'])->name('settingUbahAlamat');
-Route::post('/settingAkun/tambahAlamat', [SettingUbahAlamatController::class, 'createAlamat'])->name('tambahAlamat');
-Route::put('/settingAkun/updateAlamat/{id}', [SettingUbahAlamatController::class, 'updateAlamat'])->name('updateAlamat');
-Route::delete('/settingAkun/hapusAlamat/{id}', [SettingUbahAlamatController::class, 'destroyAlamat'])->name('hapusAlamat');
-Route::get('/ubah-alamat', function () {
-    return view('settingaccount.ubah_alamat');
-})->name('ubah.alamat');
+// Route::post('/settingAkun/tambahAlamat', [SettingUbahAlamatController::class, 'createAlamat'])->name('tambahAlamat');
+// Route::put('/settingAkun/updateAlamat/{id}', [SettingUbahAlamatController::class, 'updateAlamat'])->name('updateAlamat');
+// Route::delete('/settingAkun/hapusAlamat/{id}', [SettingUbahAlamatController::class, 'destroyAlamat'])->name('hapusAlamat');
+// Route::get('/ubah-alamat', function () {
+//     return view('settingaccount.ubah_alamat');
+// })->name('ubah.alamat');
 
 
 
