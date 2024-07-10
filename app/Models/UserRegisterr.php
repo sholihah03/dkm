@@ -20,6 +20,10 @@ class UserRegisterr extends Authenticatable
         'username',
         'email',
         'password',
+        'nama_lengkap',
+        'no_telepon',
+        'tgl_lahir',
+        'profil',
     ];
 
     protected $hidden = [

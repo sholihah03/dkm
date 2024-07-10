@@ -62,19 +62,26 @@ Route::get('/produkhewan',[produkhewanController::class, 'index'])->name('produk
 Route::get('/tabungan',[tabunganController::class, 'index'])->name('tabungan');
 
 
-Route::get('/settingAkun', [settingaccountController::class, 'index2']);
+Route::get('/settingAkun', [settingaccountController::class, 'index']);
 Route::get('/contact1', [ContactController::class, 'index'])->name('contact1');
-Route::get('/settingAkun', [settingaccountController::class, 'index'])->name('settingAkun');
-Route::get('/settingAkun/ubahData', [settingUbahDataController::class, 'index'])->name('ubahData');
+
 
 
 Route::get('/settingAlamat', [settingaccountAlamatController::class, 'index'])->name('settingAlamat');
 Route::get('/settingAkun/ubahAlamat', [SettingUbahAlamatController::class, 'index'])->name('settingUbahAlamat');
-Route::post('/settingAkun/tambahAlamat', [SettingUbahAlamatController::class, 'createAlamat'])->name('tambahAlamat');
-Route::put('/settingAkun/updateAlamat/{id}', [SettingUbahAlamatController::class, 'updateAlamat'])->name('updateAlamat');
-Route::delete('/settingAkun/hapusAlamat/{id}', [SettingUbahAlamatController::class, 'destroyAlamat'])->name('hapusAlamat');
-Route::get('/ubah-alamat', function () {
-    return view('settingaccount.ubah_alamat');
-})->name('ubah.alamat');
+// Route::post('/settingAkun/tambahAlamat', [SettingUbahAlamatController::class, 'createAlamat'])->name('tambahAlamat');
+// Route::put('/settingAkun/updateAlamat/{id}', [SettingUbahAlamatController::class, 'updateAlamat'])->name('updateAlamat');
+// Route::delete('/settingAkun/hapusAlamat/{id}', [SettingUbahAlamatController::class, 'destroyAlamat'])->name('hapusAlamat');
+// Route::get('/ubah-alamat', function () {
+//     return view('settingaccount.ubah_alamat');
+// })->name('ubah.alamat');
+
+
+Route::get('/settingAkun', [settingUbahDataController::class, 'index'])->name('settingAkun');
+Route::post('/settingAkun/ubahData', [settingUbahDataController::class, 'updateData'])->name('ubahData');
+
+Route::get('/editAlamat/{id?}', [SettingUbahAlamatController::class, 'indexAlamat'])->name('editAlamat');
+Route::post('/tambahAlamat', [SettingUbahAlamatController::class, 'tambahAlamat'])->name('tambahAlamat');
+Route::put('/updateAlamat/{id}', [SettingUbahAlamatController::class, 'updateAlamat'])->name('updateAlamat');
 
 

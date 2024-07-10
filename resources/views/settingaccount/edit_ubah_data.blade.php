@@ -9,6 +9,7 @@
     <span class="close-btn-data">&times;</span>
     {{-- <form action="{{ route('ubahData', $user->id) }}"> --}}
     <form action="{{ route('ubahData') }}" method="POST">
+        @csrf
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="Tambahkan Username" value="{{ $user->username ?? '' }}">
 

@@ -19,80 +19,62 @@ class SettingUbahAlamatController extends Controller
         return view('settingaccount.edit_ubah_alamat', compact('alamat'));
     }
 
+    public function indexAlamat($id = null)
+    {
+        $alamat = $id ? Alamat::findOrFail($id) : new Alamat();
+        return view('settingaccount.edit_ubah_alamat', compact('alamat'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
-    public function createAlamat(Request $request)
+
+    public function tambahAlamat(Request $request)
     {
-        // Validasi request
-        $request->validate([
-            'idUser' => 'required|exists:newusers,idUser',
-            'alamat_lengkap' => 'required|string',
-            'rt' => 'required|string',
-            'rw' => 'required|string',
-            'kelurahan' => 'required|string',
-            'kabupaten' => 'required|string',
-            'kecamatan' => 'required|string',
-            'provinsi' => 'required|string',
-        ]);
+        $user = auth()->user();
 
-        // Simpan data alamat baru
-        $alamat = Alamat::create([
-            'idUser' => $request->idUser,
-            'alamat_lengkap' => $request->alamat_lengkap,
-            'rt' => $request->rt,
-            'rw' => $request->rw,
-            'kelurahan' => $request->kelurahan,
-            'kabupaten' => $request->kabupaten,
-            'kecamatan' => $request->kecamatan,
-            'provinsi' => $request->provinsi,
-        ]);
+        if (!auth()->check()) {
+            return redirect()->route('login')->with('error', 'Silakan login terlebih dahulu.');
+        }
 
-        // Berhasil menambahkan alamat
-        // return response()->json(['message' => 'Alamat berhasil ditambahkan', 'data' => $alamat], 201);
-        return redirect()->route('settingAkun')->with('success', 'Alamat berhasil ditambahkan');
+        $alamat = new Alamat();
+        $alamat->idUser = $user->id;
+        $alamat->alamat_lengkap = $request->input('alamat_lengkap');
+        $alamat->rt = $request->input('rt');
+        $alamat->rw = $request->input('rw');
+        $alamat->kelurahan = $request->input('kelurahan');
+        $alamat->kabupaten = $request->input('kabupaten');
+        $alamat->kecamatan = $request->input('kecamatan');
+        $alamat->provinsi = $request->input('provinsi');
+
+        $alamat->save();
+
+        return redirect()->route('settingAkun')->with('success', 'Alamat berhasil ditambahkan.');
     }
 
-    // public function edit($id)
-    // {
-    //     $alamat = Alamat::findOrFail($id);
-    //     return view('alamat.edit', compact('alamat'));
-    // }
 
     /**
      * Mengupdate data alamat yang sudah ada.
      */
     public function updateAlamat(Request $request, $id)
     {
-        // Validasi request
-        $request->validate([
-            'idUser' => 'required|exists:newusers,idUser',
-            'alamat_lengkap' => 'required|string',
-            'rt' => 'required|string',
-            'rw' => 'required|string',
-            'kelurahan' => 'required|string',
-            'kabupaten' => 'required|string',
-            'kecamatan' => 'required|string',
-            'provinsi' => 'required|string',
-        ]);
 
-        // Temukan data alamat yang akan diupdate
+        if (!auth()->check()) {
+            return redirect()->route('login')->with('error', 'Silakan login terlebih dahulu.');
+        }
+        
         $alamat = Alamat::findOrFail($id);
+        $alamat->alamat_lengkap = $request->input('alamat_lengkap');
+        $alamat->rt = $request->input('rt');
+        $alamat->rw = $request->input('rw');
+        $alamat->kelurahan = $request->input('kelurahan');
+        $alamat->kabupaten = $request->input('kabupaten');
+        $alamat->kecamatan = $request->input('kecamatan');
+        $alamat->provinsi = $request->input('provinsi');
 
-        // Update data alamat
-        $alamat->update([
-            'idUser' => $request->idUser,
-            'alamat_lengkap' => $request->alamat_lengkap,
-            'rt' => $request->rt,
-            'rw' => $request->rw,
-            'kelurahan' => $request->kelurahan,
-            'kabupaten' => $request->kabupaten,
-            'kecamatan' => $request->kecamatan,
-            'provinsi' => $request->provinsi,
-        ]);
+        $alamat->save();
 
-        // Berhasil mengupdate alamat
-        return redirect()->route('settingAkun')->with('success', 'Alamat berhasil diupdate');
+        return redirect()->route('settingAkun')->with('success', 'Alamat berhasil diperbarui.');
     }
 
     /**
@@ -100,14 +82,11 @@ class SettingUbahAlamatController extends Controller
      */
     public function destroyAlamat($id)
     {
-        // Temukan data alamat yang akan dihapus
-        $alamat = Alamat::findOrFail($id);
-        $alamat->delete();
 
-        // Berhasil menghapus alamat
-        return redirect()->route('settingAkun')->with('success', 'Alamat berhasil dihapus');
+        // $alamat = Alamat::findOrFail($id);
+        // $alamat->delete();
+
+        // return redirect()->route('settingAkun')->with('success', 'Alamat berhasil dihapus');
     }
 
-
-    // Metode lainnya seperti store(), show(), edit(), update(), dan destroy() bisa ditambahkan sesuai kebutuhan aplikasi Anda
 }

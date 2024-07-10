@@ -11,13 +11,43 @@ class settingUbahDataController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        // return view('settingaccount.edit_ubah_data');
+    // public function index()
+    // {
 
-        $user = Auth::user(); // Mengambil data pengguna yang sedang login
-        return view('settingaccount.edit_data_popup', compact('user'));
-    }
+    //     $user = Auth::user();
+    //     return view('settingaccount.edit_data_popup', compact('user'));
+    // }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+
+     public function index(Request $request)
+     {
+         $user = UserRegisterr::where('username', auth()->user()->username)->first();
+
+         return view('settingaccount.index', compact('user'));
+     }
+
+     /**
+      * Update the specified resource in storage.
+      */
+
+     public function updateData(Request $request)
+     {
+         $user = UserRegisterr::where('username', auth()->user()->username)->first();
+
+         // Update existing fields
+         $user->username = $request->input('username');
+         $user->email = $request->input('email');
+         $user->nama_lengkap = $request->input('nama_lengkap');
+         $user->no_telepon = $request->input('no_telepon');
+         $user->tgl_lahir = $request->input('tgl_lahir');
+
+         $user->save();
+
+         return redirect()->route('settingAkun')->with('success', 'Data berhasil diperbarui.');
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -43,31 +73,6 @@ class settingUbahDataController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        $user = UserRegisterr::find($id);
-
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->nama_lengkap = $request->nama_lengkap;
-        $user->no_telepon = $request->no_telepon;
-        $user->tgl_lahir = $request->tgl_lahir;
-
-        $user->save();
-
-        return redirect()->route('settingAkun')->with('success', 'Data berhasil diupdate');
-    }
 
     /**
      * Remove the specified resource from storage.
